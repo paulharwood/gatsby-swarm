@@ -132,16 +132,15 @@ $menu-label-color: $white-ter
 body
   font-family: "Rubik", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
 
-
 .navbar
     min-height: 6.25rem
 
 .navbar-item img
   max-height: 3.75rem
 
-+mobile
-
-
+  .navbar-menu .navbar-item
+    padding-left: 1.25rem
+    font-size: 2em
 
 
 .content h1
@@ -149,6 +148,11 @@ body
 
 .content h1, .content h2, .content h3, .content h4, .title
   font-weight: 300 !important
+  max-width: 33rem
+
+.content h3
+  font-size: 2em
+
 
 // responsiveness
 +tablet-only
@@ -168,5 +172,7 @@ body
   .section
     padding: 3rem 1rem
   .navbar-burger
-    height: 4.25rem
+    height: 5.25rem
     width: 5.25rem
+  .navbar-burger span
+    height: 2px
