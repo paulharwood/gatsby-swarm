@@ -5,7 +5,7 @@ image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: SoftWare, Additive & Rapid Manufacturing in Wales
 mainpitch:
-  title: Why Kaldi
+  title: SWARM
   description: >
     Kaldi is the coffee store for everyone who believes that great coffee
     shouldn't just taste good, it should do good too. We source all of our beans
