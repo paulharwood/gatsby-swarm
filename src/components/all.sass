@@ -4,11 +4,13 @@
 // Kaldi logo brand color: #FD461E
 $kaldi-red: #D64000
 $kaldi-red-invert: #fff
-
+$scheme-main: #ffe7dc
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
-$black: #2b2523
+$black: #962f0c
+$link: #ea5f3b
+$link-hover: #e5310e
 
 
 
@@ -116,30 +118,55 @@ $menu-label-color: $white-ter
 
 // blog roll
 .blog-list-item.is-featured
-  background-color: #d6400033;
+  background-color: #d6400033
 .blog-list-item header
-  display: flex;
-  margin-bottom: 1em;
+  display: flex
+  margin-bottom: 1em
 .blog-list-item .featured-thumbnail
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
+  flex-basis: 35%
+  margin: 0 1.5em 0 0
 
 
 @import "~bulma"
 
 body
-  font-family: 'Noto Sans TC', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Rubik", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
 
+
+.navbar
+    min-height: 6.25rem
+
+.navbar-item img
+  max-height: 3.75rem
+
++mobile
+
+
+
+
+.content h1
+  font-size: 4em
+
+.content h1, .content h2, .content h3, .content h4, .title
+  font-weight: 300 !important
 
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
+    flex-basis: 50%
 
 +mobile
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail
-    text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em;
+    text-align: center
+    max-width: 70%
+    margin: 0 0 1em
+  .navbar-menu .navbar-item
+    padding-left: 2rem
+    font-size: 2em
+  .section
+    padding: 3rem 1rem
+  .navbar-burger
+    height: 4.25rem
+    width: 5.25rem
