@@ -10,20 +10,23 @@ import vimeo from '../img/social/vimeo.svg'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
+      <footer className="footer">
         <div className="content has-text-centered">
-          <img
-            src={logo}
-            alt="Kaldi"
-            style={{ width: '14em', height: '10em' }}
-          />
-        </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
+          <div className="container">
             <div className="columns">
-              <div className="column is-4">
+              <div className="column is-offset-1 is-4">
                 <section className="menu">
                   <ul className="menu-list">
+                    <li>
+                      <Link className="navbar-item" to="/blog">
+                        Latest Stories
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="navbar-item" to="/contact">
+                        Contact
+                      </Link>
+                    </li>
                     <li>
                       <Link to="/" className="navbar-item">
                         Home
@@ -60,16 +63,7 @@ const Footer = class extends React.Component {
               <div className="column is-4">
                 <section>
                   <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
+
                   </ul>
                 </section>
               </div>
@@ -106,6 +100,13 @@ const Footer = class extends React.Component {
               </div>
             </div>
           </div>
+        </div>
+        <div className="content has-text-centered">
+          <img
+            src={logo}
+            alt="SWARM"
+            style={{ width: '14em', height: '10em', marginBottom: '10em',  marginTop: '4em' }}
+          />
         </div>
       </footer>
     )
