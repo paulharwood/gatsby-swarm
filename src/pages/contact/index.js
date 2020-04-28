@@ -39,7 +39,11 @@ export default class Index extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
+              <div className="columns">
+                <div className="is-parent column is-4 is-offset-1" >
+
+
+              <h2>Contact Us</h2>
               <form
                 name="contact"
                 method="post"
@@ -106,6 +110,8 @@ export default class Index extends React.Component {
                   </button>
                 </div>
               </form>
+                </div>
+              </div>
             </div>
           </div>
         </section>

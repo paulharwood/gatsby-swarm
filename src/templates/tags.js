@@ -9,14 +9,21 @@ class TagRoute extends React.Component {
     const postLinks = posts.map((post) => (
       <li key={post.node.fields.slug}>
         <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
+          <p className="">{post.node.frontmatter.title}</p>
         </Link>
+        <p className="">{post.node.frontmatter.date}</p>
+
+        {post.node.frontmatter.tags && post.node.frontmatter.tags.length ? (
+          <p> {post.node.frontmatter.tags.length} </p>
+
+        ) : null }
+
       </li>
     ))
     const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
     const totalCount = this.props.data.allMarkdownRemark.totalCount
-    const tagHeader = `${totalCount} post${
+    const tagHeader = `${totalCount} directory listing${
       totalCount === 1 ? '' : 's'
     } tagged with “${tag}”`
 
@@ -30,8 +37,8 @@ class TagRoute extends React.Component {
                 className="column is-10 is-offset-1"
                 style={{ marginBottom: '6rem' }}
               >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-                <ul className="taglist">{postLinks}</ul>
+                <p className=" is-bold-light">{tagHeader}</p>
+                <ul className="tagResults">{postLinks}</ul>
                 <p>
                   <Link to="/tags/">Browse all tags</Link>
                 </p>
@@ -66,9 +73,27 @@ export const tagPageQuery = graphql`
           }
           frontmatter {
             title
+            tags
+            date
           }
         }
       }
     }
   }
 `
+
+
+
+// {post.frontmatter.tags && post.frontmatter.tags.length ? (
+//     <ul className="taglist">
+//       {post.frontmatter.tags.map((tag) => (
+//         <li key={tag + `tag`}>
+//           <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+//         </li>
+//       ))}
+//     </ul>
+// ) : null}
+// </p>
+// <p className="added">
+// Added {post.frontmatter.date}
+// </p>
