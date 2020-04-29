@@ -29,6 +29,3 @@ A listing set up to show you how a listing should be structured. Please try to k
 - e-mail
 - whatsapp (primary) [Join here](https://whatsaopp.join-link.examplelink)
 - Microsoft teams [Join here](https://join-link.examplelink)
-
-## Main Contact
-Paul Harwood (paul.harwood@techhub.com)
