@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'S.W.A.R.M. Open Directory - South Wales Additive & Rapid Manufacturing Directory',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'An open directory of people and resources involved in additive and rapid manufacturing in the South Wales region.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
