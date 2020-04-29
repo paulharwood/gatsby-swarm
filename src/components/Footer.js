@@ -21,7 +21,7 @@ const Footer = class extends React.Component {
                   <ul className="menu-list">
                     <li>
                       <a className="navbar-item" href="https://github.com/paulharwood/gatsby-swarm">
-                        Open Directory on GitHub
+                        S.W.A.R.M. Open Directory on GitHub
                       </a>
                     </li>
                     <li>
