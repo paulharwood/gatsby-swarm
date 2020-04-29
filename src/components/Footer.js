@@ -17,6 +17,16 @@ const Footer = class extends React.Component {
                 <section className="menu">
                   <ul className="menu-list">
                     <li>
+                      <a className="navbar-item" href="https://github.com/paulharwood/gatsby-swarm">
+                        Open Directory on GitHub
+                      </a>
+                    </li>
+                    <li>
+                      <a className="navbar-item" href="https://medium.com/@swarm_directory">
+                        Articles
+                      </a>
+                    </li>
+                    <li>
                       <Link className="navbar-item" to="/contact">
                         Contact Us
                       </Link>
