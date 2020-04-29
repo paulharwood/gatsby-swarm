@@ -14,6 +14,9 @@ const Footer = class extends React.Component {
         <div className="container">
             <div className="columns">
               <div className="column is-offset-1 is-4">
+
+                <hr></hr>
+
                 <section className="menu">
                   <ul className="menu-list">
                     <li>
@@ -38,8 +41,19 @@ const Footer = class extends React.Component {
                     </li>
                   </ul>
                 </section>
+                <hr></hr>
+                  <section>
+                    <h3>This website's code is shared using the MIT License</h3>
+                    <p>
+                      A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+                    </p>
+                    <br />
+                    <h3>Terms & Conditions : This website's data is open licensed</h3>
+                    <p>By sharing information on this website, you agree it will be placed in the public domain, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                      <br /><br />  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                    </p>
+                  </section>
               </div>
-
             </div>
           </div>
         <div className="content has-text-centered">
