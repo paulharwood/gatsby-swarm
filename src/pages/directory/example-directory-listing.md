@@ -20,6 +20,8 @@ A listing set up to show you how a listing should be structured. Please try to k
 - e.g. 3 d printers
 - materials processing
 
+![3d-printer-printing-technology.jpg](https://c1.wallpaperflare.com/preview/852/974/332/3d-printer-printing-technology.jpg)
+
 ## Contact information
 - your@email.address
 - 01792334455
