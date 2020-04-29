@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: directory-listing
 title: An Example Listing
 date: 2020-04-29T10:01:03.494Z
 description: this is a short description
@@ -22,7 +22,7 @@ The goals of this team are to:
 - Prepare a supply chain for a specific need
 
 ## Current issues
-- Requesting something from an [example external supplier](https://external-supplier-example-link) 
+- Requesting something from an [example external supplier](https://external-supplier-example-link)
 - Urgent ask for an [example resource](/example-resource) (e.g. masks)
 
 ### Team communication channels
@@ -37,8 +37,6 @@ The goals of this team are to:
 Paul Harwood (paul.harwood@techhub.com)
 
 ### Team members
-- Iain Whitaker (ian@www.com) | [Swansea University](https://wiki.swarm-covid19.co.uk/organistions/swansea-university) | MA Cantab PHD FRCS  Surgical Specialty Lead, Health & Care Research Wales Professor of Plastic Surgery, Swansea University Medical School  Consultant Plastic Surgeon, SBUHB 
+- Iain Whitaker (ian@www.com) | [Swansea University](https://wiki.swarm-covid19.co.uk/organistions/swansea-university) | MA Cantab PHD FRCS Surgical Specialty Lead, Health & Care Research Wales Professor of Plastic Surgery, Swansea University Medical School Consultant Plastic Surgeon, SBUHB 
 - Ms Zita Jessop (zita@www.com) | [Swansea University](https://wiki.swarm-covid19.co.uk/organistions/swansea-university) | MA Cantab PhD MRCS Clinical Lecturer, Swansea University Specialty Surgery Trainee, SBUHB MRC Clinical Research Training Fellow 
 - Chris Hopkins (chris@www.com) | | [Hywel Dda University Health Board](https://wiki.swarm-covid19.co.uk/organistions/hywel-dda) | MSc, BSc. (Hons), Cert HP, IEng, MIET, MIPEM, RSci, PGCE, PG Dip PDET. Consultant Clinical Scientist Head of Clinical Engineering Hywel Dda University Health Board 
-
-

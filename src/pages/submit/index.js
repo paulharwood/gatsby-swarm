@@ -43,7 +43,7 @@ export default class Index extends React.Component {
                 <div className="is-parent column is-4 is-offset-1" >
 
 
-              <h2>Contact Us</h2>
+              <h2>Submit your resource</h2>
               <form
                 name="contact"
                 method="post"
@@ -92,7 +92,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'message'}>
-                    Message
+                    Submission details
                   </label>
                   <div className="control">
                     <textarea

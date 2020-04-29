@@ -2,65 +2,68 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class BlogRoll extends React.Component {
+class DirectoryListing extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className="is-parent column is-10 is-offset-1" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  <h2 className="post-meta">
-                    <Link
-                      className="title has-text-primary"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
+
+      <div className="listings">
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            {posts &&
+              posts.map(({ node: post }) => (
+                <div className="listing" key={post.id}>
+                  <article
+                    className="is-child notification"
+                  >
+                    <header>
+                      <h2 className="post-meta">
+                        <Link
+                          className="title has-text-primary"
+                          to={post.fields.slug}
+                        >
+                          {post.frontmatter.title}
+                        </Link>
+                      </h2>
+                    </header>
+                    <p>
+                      {post.excerpt}
+
+                      <br />
+                      <br />
+                      {post.frontmatter.tags && post.frontmatter.tags.length ? (
+                          <ul className="taglist">
+                            {post.frontmatter.tags.map((tag) => (
+                              <li key={tag + `tag`}>
+                                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                      ) : null}
+                    </p>
+                    <Link className="button" to={post.fields.slug}>
+                      See details
                     </Link>
-                  </h2>
-                </header>
-                <p>
-                  {post.excerpt}
 
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    See details
-                  </Link>
-                  {post.frontmatter.tags && post.frontmatter.tags.length ? (
-                      <ul className="taglist">
-                        {post.frontmatter.tags.map((tag) => (
-                          <li key={tag + `tag`}>
-                            <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                  ) : null}
+                    <p className="added">
+                      Updated {post.frontmatter.date}
+                    </p>
+                  </article>
+                    <hr></hr>
+                </div>
 
-
-                </p>
-                <p className="added">
-                  Added {post.frontmatter.date}
-                </p>
-              </article>
-            </div>
-          ))}
+              ))}
+          </div>
+        </div>
       </div>
     )
   }
 }
 
-BlogRoll.propTypes = {
+DirectoryListing.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -71,10 +74,10 @@ BlogRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query BlogRollQuery {
+      query DirectoryListingQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          filter: { frontmatter: { templateKey: { eq: "directory-listing" } } }
         ) {
           edges {
             node {
@@ -102,6 +105,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <DirectoryListing data={data} count={count} />}
   />
 )
